@@ -10,8 +10,7 @@ identical conditions. In each pair, one seedling had been self-fertilised and th
 other cross-fertilised. The final heights (in inches) of the plants can be found in
 the data set seedlings.
 
-(a) Obtain sample mean heights for both the cross-fertilised and self-fertilised
-plants. What are the standard errors of these means? 
+### (a) Obtain sample mean heights for both the cross-fertilised and self-fertilised plants. What are the standard errors of these means? 
 
 *The sample mean height of the cross-fertilized seedlings is: 20.19333*
 
@@ -38,8 +37,7 @@ The standard error of the self-fertilized seedling is: 0.52625
 ```
 
 
-(b) Obtain a 95% confidence interval for the mean height of the cross-fertilised
-plants. You should use your answer to part (a) in order to do this. 
+### (b) Obtain a 95% confidence interval for the mean height of the cross-fertilised plants. You should use your answer to part (a) in order to do this. 
 
 *The 95% confidence interval for the mean height of the cross-fertilized plants is:
 **(18.191, 22.196)** *
@@ -50,15 +48,11 @@ plants. You should use your answer to part (a) in order to do this.
 [1] 22.19588
 ```
 
-(c) If you carried out the experiment 500 times, and calculated the 95% con-
-fidence interval for the mean height of the cross-fertilised plants each time,
-how many of the confidence intervals would you expect to contain the pop-
-ulation mean? 
+### (c) If you carried out the experiment 500 times, and calculated the 95% confidence interval for the mean height of the cross-fertilised plants each time, how many of the confidence intervals would you expect to contain the population mean? 
 
 *If the experiment was carried out 500 times and I calculated the 95% confidence interval each time, I would expect 500*0.95 = **475 experiments** *to contain the population mean. 
 
-(d) Using your confidence interval, test whether there is evidence that the mean
-height is different to 19 inches. 
+### (d) Using your confidence interval, test whether there is evidence that the mean height is different to 19 inches. 
 
 *H0 :  mu = 19 inches. H1 : mu ≠ 19 inches. Since our 95% confidence interval is from (18.191,22.196), and **19 inches lies within the confidence interval, there is no evidence to reject the null hypothesis** which means that there is no evidence that the mean is different to 19 inches.* 
 
@@ -69,9 +63,7 @@ This question also uses the results of Darwin's experiment into plant growth,
 but focuses on the differences between the heights of the cross- and self-fertilised
 plants.
 
-(a) Draw a scatter plot to compare the final heights of the two types of plants.
-What is the correlation between the two sets of heights? Interpret your
-results.
+### (a) Draw a scatter plot to compare the final heights of the two types of plants. What is the correlation between the two sets of heights? Interpret your results.
 
 *The scatter plots are presented below (the line shows the closest line of fit to the scatter plot). There doesn’t seem to be a clear correlation between the two sets of heights when looking at the graphs, however, finding the correlation between the two heights there is a slight negative correlation between them. The pearson’s correlation is -0.3379 while spearman’s correlation is -0.3348*
 
@@ -83,8 +75,7 @@ results.
  ```
  
 
-(b) Write down null and alternative hypotheses to test whether the nal heights
-of the cross-fertilised plants are greater than the self-fertilised plants. 
+### (b) Write down null and alternative hypotheses to test whether the final heights of the cross-fertilised plants are greater than the self-fertilised plants. 
 
 
 
@@ -92,9 +83,7 @@ of the cross-fertilised plants are greater than the self-fertilised plants.
 *H1: µ(cross fertilized plants height) > µ(self fertilized plants height)
 
 
-(c) Carry out an appropriate parametric test on the hypotheses in part (b). You
-should test at the 5% level. Would you draw the same conclusion at the 1%
-level? 
+### (c) Carry out an appropriate parametric test on the hypotheses in part (b). You should test at the 5% level. Would you draw the same conclusion at the 1% level? 
 
 ```{r}
 t.test(seedlings$Crossfertilised, seedlings$Selffertilised, alt="greater", paired = T)
@@ -110,12 +99,12 @@ sample estimates:
 mean of the differences 
                2.606667 
 ```
+
 *As you can see, the p-value is 0.02512. So with a test at the 5% level, since 0.02512 < 0.05, we would reject the null hypothesis and conclude that the heights of the Cross fertilized plants are indeed greater than the Self Fertilized plants. However, if we did test at the 1% level, we would get a different conclusion as 0.02512> 0.01, we would not be able to reject the null hypothesis.*
 
 
 
-(d) If you wanted instead to carry out a non-parametric test in part (c), which
-one would you use? 
+### (d) If you wanted instead to carry out a non-parametric test in part (c), which one would you use? 
 
 *If we wanted to carry out a non-parametric test for part c, we would use the Wilcoxon signed ranks test as we are using paired data.
 
@@ -128,12 +117,7 @@ variable Y (Y > 0) are:
 E[Y] = 1 / Lambda
 Var(Y ) =1/(Lambda^2)
 
-(a) What is the method of moments estimate for lambda?
-The exponential distribution can be used to model the size of non-zero rainfalls.
-The rainfall dataset which can be found in the file CWdata.Rdata contains 285
-non-zero hourly rainfall totals (in mm), measured at a single location.
-
-a.)  
+### (a) What is the method of moments estimate for lambda? The exponential distribution can be used to model the size of non-zero rainfalls. The rainfall dataset which can be found in the file CWdata.Rdata contains 285 non-zero hourly rainfall totals (in mm), measured at a single location.
 
 *E[Y] = 1/λ
 
@@ -145,9 +129,7 @@ a.) 
 
 *(λ=1/(1/n ∑_(i=1)^n▒Yi)
 
-(b) Assume that these observations are an i.i.d sample taken from an Exponential(lambda)
-distribution. Calculate the sample mean for this data, and hence obtain the
-method of moments estimate of lambda.
+### (b) Assume that these observations are an i.i.d sample taken from an Exponential(lambda) distribution. Calculate the sample mean for this data, and hence obtain the method of moments estimate of lambda.
 
 *The mean for the rainfall data is: 19.93*
 ```{r}
@@ -164,8 +146,7 @@ method of moments estimate of lambda.
 **So λ=0.05**
 
 
-(c) Using your answer to part (b), what is the probability that the rainfall total
-in a given hour exceeds 35mm, Pr[Y > 35]? 
+### (c) Using your answer to part (b), what is the probability that the rainfall total in a given hour exceeds 35mm, Pr[Y > 35]? 
 
 **The Pr[Y > 35] = 0.173**
 ```{r}
@@ -174,12 +155,7 @@ in a given hour exceeds 35mm, Pr[Y > 35]?
 [1] 0.1727598
 ```
 
-(d) Plot a histogram of your data, and overlay this with the density of the
-Exponential distribution, taking lambda to be the value estimated in part (b).
-Why is the exponential distribution not appropriate? Hints. You might
-want to use the function dexp to draw the density. To get an appropriate
-range of x values on which to plot the density, consider both the range of
-your data and the sampling space of the exponential distribution. 
+### (d) Plot a histogram of your data, and overlay this with the density of the Exponential distribution, taking lambda to be the value estimated in part (b). Why is the exponential distribution not appropriate? Hints. You might want to use the function dexp to draw the density. To get an appropriate range of x values on which to plot the density, consider both the range of your data and the sampling space of the exponential distribution. 
 
 ```{r}
 > hist(rainfall)
@@ -204,7 +180,7 @@ Y (Y > 0) are:
 E[Y] = alpha/beta
 and Var(Y ) = alpha / (beta^2)
 
-(a) Give expressions for the method of moments estimators for alpha and beta
+### (a) Give expressions for the method of moments estimators for alpha and beta
 
 *E[Y] = α/β   
 Ῡ = α/β 
@@ -228,9 +204,7 @@ or written differently
 α= Ῡ2 / [ E(Y2) – (Ῡ)2]**
 
 
-(b) Using your answer to part (a), and by calculating the sample mean and
-variance for the rainfall data used in question 2, obtain estimates for alpha
-and beta under the Gamma model.
+### (b) Using your answer to part (a), and by calculating the sample mean and variance for the rainfall data used in question 2, obtain estimates for alpha and beta under the Gamma model.
 
 *Using R and the rainfall data, we get **Beta = 2.018 and Alpha = 40.217** 
 ```{r}
@@ -251,9 +225,7 @@ and beta under the Gamma model.
 [1] 40.21733
 ```
 
-(c) Plot the density of your fitted model, using the function dgamma. Why is this
-a more appropriate model for the rainfall data than the exponential model
-used in the previous question? 
+### (c) Plot the density of your fitted model, using the function dgamma. Why is this a more appropriate model for the rainfall data than the exponential model used in the previous question? 
 
 *Here is the plot of the density of the fitted model using dgamma, as you can see with the graph, the fitted model of dgamma (the red line) matches up with the shape of the histogram a lot better then the exponential model and is thus a more appropriate model to use:
  ```{r}
@@ -264,7 +236,7 @@ used in the previous question?
 
 
 
-(d) What is the estimate of Pr[Y > 35] under this model? 
+### (d) What is the estimate of Pr[Y > 35] under this model? 
 
 ***The Pr[Y>35] = 3.319e-05** under this model so it is extremely small which matches up with the graph as well.
 ```{r}
@@ -272,9 +244,7 @@ used in the previous question?
 [1] 3.31941e-05
 ```
 
-(e) Using bootstrap methods obtain the sampling distribution for Pr[Y > 35]
-under this model, and consequently give an estimate of the 95% confidence
-interval for this probability. 
+### (e) Using bootstrap methods obtain the sampling distribution for Pr[Y > 35] under this model, and consequently give an estimate of the 95% confidence interval for this probability. 
 
 *Here is the code to generate the bootstrap sampling distribution for Pr[Y>35]. The **95% confidence interval is (0.9999030, 0.9999928) that the Pr[Y>35] for 1000 bootstrapped samples**. Ofcoarse the histogram shape and the confidence interval will vary because of RNG.
 ```{r}
@@ -311,7 +281,7 @@ Invaded Not invaded
 Species A 2 13
 Species B 10 3
 
-(a) Calculate the row, column and overall totals for the above data. 
+### (a) Calculate the row, column and overall totals for the above data. 
 
 *Here are the row, column, and overall totals
 	Invaded	Not Invaded	Row Totals
@@ -320,8 +290,7 @@ Species B 	10	3	Species B Total: 13
 Column Totals	Invaded Total: 12	Not Invaded Total: 16	Overall Total: 28
 
 
-(b) Carry out a ChiSquared test to decide whether or not ants prefer one species of tree
-over the other. 
+### (b) Carry out a ChiSquared test to decide whether or not ants prefer one species of tree over the other. 
 
 *I have performed both the chi-squared test manually and automatically below both resulting in the same conclusion.
 
@@ -353,12 +322,11 @@ X-squared = 9.0491, df = 1, p-value = 0.002628
 *Leads us to the same result with a slightly different p-value of 0.0026. However, we will still reject H0 and conclude that ants do prefer one species of tree over the other as 0.0026 < 0.05. 
 
 
-(c) What is Fisher's exact test, and when is it useful? 
+### (c) What is Fisher's exact test, and when is it useful? 
 
 **Fisher’s exact test is an exact test of association for a 2x2 data set, however, unlike the X2  test, it doesn’t rely on asymptotic results and it is useful when we don’t have a large data set and when at least one of the expected responses is less then 5
 
-(d) Carry out Fisher's exact test on the ant data. Do your conclusions
-change? 
+### (d) Carry out Fisher's exact test on the ant data. Do your conclusions change? 
 
 *Doing the fisher’s test automatically in R: 
 ```{r}
@@ -390,10 +358,7 @@ antLengths. Groups are ordered from 1 (smallest) to 5 (largest).
 
 
 
-(a) Carry out an appropriate test to see whether or not the ant colony in the
-tree colonisation experiment is consistent with the ndings of the original
-study, in terms of the proportions of workers in each of the size
-categories. 
+### (a) Carry out an appropriate test to see whether or not the ant colony in the tree colonisation experiment is consistent with the findings of the original study, in terms of the proportions of workers in each of the size categories. 
 
 *The total number of ants in the sample is: 8+14+8+6+4 = 40 ants
 Species of Ants	Small	Semi-Small	Medium	Semi-Large	Large
@@ -414,7 +379,7 @@ H1 = Sample probabilities do not equal population properties.
 *Since we get a p-value of 0.42 and 0.42 > 0.05 or 0.01, **we can not reject H0** and therefore conclude that the ant colony experiment is consistent with the finding of the original study in terms of the proportions of workers in each of the size categories. 
 
 
-(b) Produce an appropriate plot of the ant lengths according to group. 
+### (b) Produce an appropriate plot of the ant lengths according to group. 
 
 *Here is the plot which shows group on the x-axis while showing the ant lengths on the y axis.  I used a simple plot to show the different in ant lengths heights in different groups.
 
@@ -428,10 +393,7 @@ H1 = Sample probabilities do not equal population properties.
 ```
 *I have also depicted a boxplot separating each group and showing the lengths distribution on the y-axis, it clearly shows that the mean lengths of ants are different depending on which group they are in with an increasing length when going from Group 1 to Group 5.
 
-(c) What test would be appropriate to assess whether or not there is evidence
-that the mean ant lengths differ between the five groups? Carry out this test
-at the 5% level. What assumptions have you made about the data in order
-to carry out this test? 
+### (c) What test would be appropriate to assess whether or not there is evidence that the mean ant lengths differ between the five groups? Carry out this test at the 5% level. What assumptions have you made about the data in order to carry out this test? 
 
 *I have used the non-parametric Kruskal-Wallis test because our data set is small and it doesn’t require any normality assumption, is less influenced by outliers, and is generally useful for small samples. 
 
