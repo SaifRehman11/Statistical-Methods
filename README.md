@@ -20,17 +20,17 @@ mean(seedlings$Crossfertilised)
 [1] 20.19333
 ```
 
-The sample mean height of the self-fertilized seedlings is:17.58667
+*The sample mean height of the self-fertilized seedlings is:17.58667*
 ```
 > mean(seedlings$Selffertilised)
 [1] 17.58667
 ```
-The standard error of the cross-fertilized seedlings is: 0.9337
+*The standard error of the cross-fertilized seedlings is: 0.9337*
 ```{r}
 > sd(seedlings$Crossfertilised)/sqrt(length(seedlings$Crossfertilised))
 [1] 0.9336802
 ```
-The standard error of the self-fertilized seedling is: 0.52625
+*The standard error of the self-fertilized seedling is: 0.52625*
 ```{r}
 > sd(seedlings$Selffertilised)/sqrt(length(seedlings$Selffertilised))
 [1] 0.5262506
@@ -39,8 +39,8 @@ The standard error of the self-fertilized seedling is: 0.52625
 
 ### (b) Obtain a 95% confidence interval for the mean height of the cross-fertilised plants. You should use your answer to part (a) in order to do this. 
 
-*The 95% confidence interval for the mean height of the cross-fertilized plants is:
-**(18.191, 22.196)** *
+*The 95% confidence interval for the mean height of the cross-fertilized plants is:*
+***(18.191, 22.196)***
 ```{r}
 > mean(seedlings$Crossfertilised) - qt(0.975,14)*sd(seedlings$Crossfertilised)/sqrt(length(seedlings$Crossfertilised))
 [1] 18.19079
@@ -50,7 +50,7 @@ The standard error of the self-fertilized seedling is: 0.52625
 
 ### (c) If you carried out the experiment 500 times, and calculated the 95% confidence interval for the mean height of the cross-fertilised plants each time, how many of the confidence intervals would you expect to contain the population mean? 
 
-*If the experiment was carried out 500 times and I calculated the 95% confidence interval each time, I would expect 500*0.95 = **475 experiments** *to contain the population mean. 
+*If the experiment was carried out 500 times and I calculated the 95% confidence interval each time, I would expect 500*0.95 = **475 experiments** *to contain the population mean.*
 
 ### (d) Using your confidence interval, test whether there is evidence that the mean height is different to 19 inches. 
 
@@ -79,8 +79,8 @@ plants.
 
 
 
-*H0: µ(cross fertilized plants height) = µ(self fertilized plants height)
-*H1: µ(cross fertilized plants height) > µ(self fertilized plants height)
+*H0: µ(cross fertilized plants height) = µ(self fertilized plants height)*
+*H1: µ(cross fertilized plants height) > µ(self fertilized plants height)*
 
 
 ### (c) Carry out an appropriate parametric test on the hypotheses in part (b). You should test at the 5% level. Would you draw the same conclusion at the 1% level? 
@@ -106,7 +106,7 @@ mean of the differences
 
 ### (d) If you wanted instead to carry out a non-parametric test in part (c), which one would you use? 
 
-*If we wanted to carry out a non-parametric test for part c, we would use the Wilcoxon signed ranks test as we are using paired data.
+*If we wanted to carry out a non-parametric test for part c, we would use the Wilcoxon signed ranks test as we are using paired data.*
 
 ## Q3 
 
@@ -119,15 +119,15 @@ Var(Y ) =1/(Lambda^2)
 
 ### (a) What is the method of moments estimate for lambda? The exponential distribution can be used to model the size of non-zero rainfalls. The rainfall dataset which can be found in the file CWdata.Rdata contains 285 non-zero hourly rainfall totals (in mm), measured at a single location.
 
-*E[Y] = 1/λ
+*E[Y] = 1/λ*
 
-*Ῡ = 1/λ
+*Ῡ = 1/λ*
 
-*λ * Ῡ = 1
+*λ * Ῡ = 1*
 
-*λ= 1/Ῡ
+*λ= 1/Ῡ*
 
-*(λ=1/(1/n ∑_(i=1)^n▒Yi)
+*(λ=1/(1/n ∑_(i=1)^n▒Yi)*
 
 ### (b) Assume that these observations are an i.i.d sample taken from an Exponential(lambda) distribution. Calculate the sample mean for this data, and hence obtain the method of moments estimate of lambda.
 
@@ -137,7 +137,7 @@ Var(Y ) =1/(Lambda^2)
 [1] 19.93333
 ```
 
-*So to calculate λ:
+*So to calculate λ:*
 *λ= 1/Ῡ= 1/19.93 = 0.05*
 ```{r}
 > 1/mean(rainfall)
@@ -182,13 +182,13 @@ and Var(Y ) = alpha / (beta^2)
 
 ### (a) Give expressions for the method of moments estimators for alpha and beta
 
-*E[Y] = α/β   
-Ῡ = α/β 
+*E[Y] = α/β*   
+*Ῡ = α/β* 
 β* Ῡ = α
 α= β *  1/n ∑_(i=1)^n▒Yi
-*Var(Y) = α/β^2 
-*Var(Y) = E(Y2) - ((E(Y))2
-*Var(Y) = 1/n ∑_(i=1)^n▒Yi2 – (1/n ∑_(i=1)^n▒Yi)2
+*Var(Y) = α/β^2* 
+*Var(Y) = E(Y2) - ((E(Y))2*
+*Var(Y) = 1/n ∑_(i=1)^n▒Yi2 – (1/n ∑_(i=1)^n▒Yi)2*
 α/β^2  = 1/n ∑_(i=1)^n▒Yi2 – (1/n ∑_(i=1)^n▒Yi)2
 α = β2  * [ 1/n ∑_(i=1)^n▒Yi2 – (1/n ∑_(i=1)^n▒Yi)2]
 β* Ῡ = α
@@ -227,7 +227,7 @@ or written differently
 
 ### (c) Plot the density of your fitted model, using the function dgamma. Why is this a more appropriate model for the rainfall data than the exponential model used in the previous question? 
 
-*Here is the plot of the density of the fitted model using dgamma, as you can see with the graph, the fitted model of dgamma (the red line) matches up with the shape of the histogram a lot better then the exponential model and is thus a more appropriate model to use:
+*Here is the plot of the density of the fitted model using dgamma, as you can see with the graph, the fitted model of dgamma (the red line) matches up with the shape of the histogram a lot better then the exponential model and is thus a more appropriate model to use:*
  ```{r}
 > hist(rainfall, freq=FALSE)
 > lines(range, dgamma(range, shape=alpha, rate=beta), col=2)
@@ -238,7 +238,7 @@ or written differently
 
 ### (d) What is the estimate of Pr[Y > 35] under this model? 
 
-***The Pr[Y>35] = 3.319e-05** under this model so it is extremely small which matches up with the graph as well.
+***The Pr[Y>35] = 3.319e-05** under this model so it is extremely small which matches up with the graph as well.*
 ```{r}
 > 1 - pgamma(35, shape = alpha, rate=beta)
 [1] 3.31941e-05
@@ -246,7 +246,7 @@ or written differently
 
 ### (e) Using bootstrap methods obtain the sampling distribution for Pr[Y > 35] under this model, and consequently give an estimate of the 95% confidence interval for this probability. 
 
-*Here is the code to generate the bootstrap sampling distribution for Pr[Y>35]. The **95% confidence interval is (0.9999030, 0.9999928) that the Pr[Y>35] for 1000 bootstrapped samples**. Ofcoarse the histogram shape and the confidence interval will vary because of RNG.
+*Here is the code to generate the bootstrap sampling distribution for Pr[Y>35]. The **95% confidence interval is (0.9999030, 0.9999928) that the Pr[Y>35] for 1000 bootstrapped samples**. Ofcoarse the histogram shape and the confidence interval will vary because of RNG*
 ```{r}
 > probBS = c()
 > dataYbar <- c()
@@ -283,7 +283,7 @@ Species B 10 3
 
 ### (a) Calculate the row, column and overall totals for the above data. 
 
-*Here are the row, column, and overall totals
+*Here are the row, column, and overall totals*
 	Invaded	Not Invaded	Row Totals
 Species A	2	13	Species A Total: 15
 Species B 	10	3	Species B Total: 13
@@ -292,18 +292,18 @@ Column Totals	Invaded Total: 12	Not Invaded Total: 16	Overall Total: 28
 
 ### (b) Carry out a ChiSquared test to decide whether or not ants prefer one species of tree over the other. 
 
-*I have performed both the chi-squared test manually and automatically below both resulting in the same conclusion.
+*I have performed both the chi-squared test manually and automatically below both resulting in the same conclusion.*
 
-*Doing the chi-squared test manually:
+*Doing the chi-squared test manually:*
 This is the expected values table:
 	Invaded	Not Invaded	Row Totals
 Species A	15*12/28 = 6.429	15*16/28 = 8.571	Species A Total: 15
 Species B 	12*13/28 = 5.571	16*13/28 = 7.429	Species B Total: 13
 Column Totals	Invaded Total: 12	Not Invaded Total: 16	Overall Total: 28
 
-H0 = Ants do not prefer one species of tree over the other
-H1 = Ants do prefer one species of tree over the other
-X2 test = (2-6.429)^2 / 6.429 + (13-8.571)^2/8.571 + (10-5.571)^2 / 5.571 + (3-7.429)^2 / 7.429 = 11.499
+*H0 = Ants do not prefer one species of tree over the other*
+*H1 = Ants do prefer one species of tree over the other*
+*X2 test = (2-6.429)^2 / 6.429 + (13-8.571)^2/8.571 + (10-5.571)^2 / 5.571 + (3-7.429)^2 / 7.429 = 11.499*
 ```{r}
 > 1-pchisq(11.49915, 1, 1)
 [1] 0.008406009
@@ -319,7 +319,7 @@ Doing the Chi-squared test automatically in R:
 data:  ants
 X-squared = 9.0491, df = 1, p-value = 0.002628
 ```
-*Leads us to the same result with a slightly different p-value of 0.0026. However, we will still reject H0 and conclude that ants do prefer one species of tree over the other as 0.0026 < 0.05. 
+*Leads us to the same result with a slightly different p-value of 0.0026. However, we will still reject H0 and conclude that ants do prefer one species of tree over the other as 0.0026 < 0.05.* 
 
 
 ### (c) What is Fisher's exact test, and when is it useful? 
@@ -328,7 +328,7 @@ X-squared = 9.0491, df = 1, p-value = 0.002628
 
 ### (d) Carry out Fisher's exact test on the ant data. Do your conclusions change? 
 
-*Doing the fisher’s test automatically in R: 
+*Doing the fisher’s test automatically in R:* 
 ```{r}
 > fisher.test(ants)
 
@@ -343,7 +343,7 @@ sample estimates:
 odds ratio 
 0.05401494
 ```
-*We obtain a p-value of 0.001 so our conclusion doesn’t change as we still **reject H0** and conclude that ants do prefer one species of tree over another as 0.001 < 0.05. 
+*We obtain a p-value of 0.001 so our conclusion doesn’t change as we still **reject H0** and conclude that ants do prefer one species of tree over another as 0.001 < 0.05.* 
 
 
 ## Q6
@@ -360,23 +360,23 @@ antLengths. Groups are ordered from 1 (smallest) to 5 (largest).
 
 ### (a) Carry out an appropriate test to see whether or not the ant colony in the tree colonisation experiment is consistent with the findings of the original study, in terms of the proportions of workers in each of the size categories. 
 
-*The total number of ants in the sample is: 8+14+8+6+4 = 40 ants
+*The total number of ants in the sample is: 8+14+8+6+4 = 40 ants*
 Species of Ants	Small	Semi-Small	Medium	Semi-Large	Large
 Frequency	8	14	8	6	4
 Expected	40*20% = 8	40*30% = 12	40*20% = 8	40*25% = 10	40*5% = 2
 
-*I am going to use the X2 test to test whether the ant colony in the tree colonization experiment is consistent with the findings of the original study. So it barely fulfils the criteria as all expected frequencies are greater than 1 and at most 20% of expected frequencies is less then 5 (only 1 in this case out of 5 which is 20%). 
-H0 = Sample probabilities equal population properties
-H1 = Sample probabilities do not equal population properties.
+*I am going to use the X2 test to test whether the ant colony in the tree colonization experiment is consistent with the findings of the original study. So it barely fulfils the criteria as all expected frequencies are greater than 1 and at most 20% of expected frequencies is less then 5 (only 1 in this case out of 5 which is 20%).* 
+*H0 = Sample probabilities equal population properties*
+*H1 = Sample probabilities do not equal population properties.*
 
-*Test Statistic: (((8-8)^2)/8) + (((14-12)^2)/14) + (((8-8)^2)/8)  + (((6-10)^2)/10) + (((4-2)^2)/2) =  3.886
+*Test Statistic: (((8-8)^2)/8) + (((14-12)^2)/14) + (((8-8)^2)/8)  + (((6-10)^2)/10) + (((4-2)^2)/2) =  3.886*
 
-*The degrees of freedom is 4 because there are 5 groups and you subtract 1. 
+*The degrees of freedom is 4 because there are 5 groups and you subtract 1.* 
 ```{r}
 > 1-pchisq(3.885714, 4)
 [1] 0.4216937
 ```
-*Since we get a p-value of 0.42 and 0.42 > 0.05 or 0.01, **we can not reject H0** and therefore conclude that the ant colony experiment is consistent with the finding of the original study in terms of the proportions of workers in each of the size categories. 
+*Since we get a p-value of 0.42 and 0.42 > 0.05 or 0.01, **we can not reject H0** and therefore conclude that the ant colony experiment is consistent with the finding of the original study in terms of the proportions of workers in each of the size categories.* 
 
 
 ### (b) Produce an appropriate plot of the ant lengths according to group. 
@@ -391,14 +391,14 @@ H1 = Sample probabilities do not equal population properties.
 > fivegroup <- antLengths$Length[antLengths$Group == 5]
 > boxplot(list(onegroup, twogroup, threegroup, fourgroup, fivegroup), names=c("Group 1","Group 2","Group 3","Group 4","Group 5"))
 ```
-*I have also depicted a boxplot separating each group and showing the lengths distribution on the y-axis, it clearly shows that the mean lengths of ants are different depending on which group they are in with an increasing length when going from Group 1 to Group 5.
+*I have also depicted a boxplot separating each group and showing the lengths distribution on the y-axis, it clearly shows that the mean lengths of ants are different depending on which group they are in with an increasing length when going from Group 1 to Group 5.*
 
 ### (c) What test would be appropriate to assess whether or not there is evidence that the mean ant lengths differ between the five groups? Carry out this test at the 5% level. What assumptions have you made about the data in order to carry out this test? 
 
-*I have used the non-parametric Kruskal-Wallis test because our data set is small and it doesn’t require any normality assumption, is less influenced by outliers, and is generally useful for small samples. 
+*I have used the non-parametric Kruskal-Wallis test because our data set is small and it doesn’t require any normality assumption, is less influenced by outliers, and is generally useful for small samples.* 
 
-*H0 : µ1 = µ2 = µ3 = µ4 = µ5
-*H1 : µ1 ≠ µ2 ≠ µ3 ≠ µ4 ≠ µ5
+*H0 : µ1 = µ2 = µ3 = µ4 = µ5*
+*H1 : µ1 ≠ µ2 ≠ µ3 ≠ µ4 ≠ µ5*
 ```{r}
 > kruskal.test(unlist(antLengths$Length) ~ antLengths$Group)
 
@@ -407,6 +407,6 @@ H1 = Sample probabilities do not equal population properties.
 data:  unlist(antLengths$Length) by antLengths$Group
 Kruskal-Wallis chi-squared = 36.405, df = 4, p-value = 2.388e-07
 ```
-*As you can see from the results of this test, we obtain a p-value of 2.388e-07 < 0.05. Which is less then our 5% confidence level so **we can reject H0** and conclude that there is significant evidence that the mean ant lengths differ between the five groups. 
+*As you can see from the results of this test, we obtain a p-value of 2.388e-07 < 0.05. Which is less then our 5% confidence level so **we can reject H0** and conclude that there is significant evidence that the mean ant lengths differ between the five groups.* 
 
 
